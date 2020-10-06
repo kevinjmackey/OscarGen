@@ -1,0 +1,120 @@
+<!--(for i,item in enumerate(items))-->
+IF EXISTS (SELECT *
+           FROM [dbo].[sysobjects]
+           WHERE [id] = OBJECT_ID(N'@!item.Name!@_Select')
+           AND OBJECTPROPERTY([id],N'IsProcedure') = 1)
+   DROP PROCEDURE [@!item.Name!@_Select];
+   GO
+/*  -- ====================================================================================
+    -- @!item.DisplayName!@ CRUD Stored Procedures ([@!item.Name!@_Select])
+    -- Generated on: @!date!@
+    -- Oscar Version: @!oscar_version!@
+    -- Application Version: @!Version!@
+    --
+    -- Template Version:  1.0
+    -- Version 1.0  Initial version of the template for CRUD Stored Procedures
+    -- ========================================================================================*/
+
+   CREATE PROCEDURE [@!item.Name!@_Select] 
+    <!--(if len(item.PKattributes) > 0)-->
+    (
+        <!--(for p, pk in enumerate(item.PKattributes))-->
+        @@!pk.Name!@ INT = NULL<!--(if len(item.PKattributes)>(i+1))-->,<!--(end)-->
+        <!--(end)-->
+    )
+    <!--(end)-->
+   AS
+   BEGIN --Procedure
+       SELECT
+    <!--(for i, attribute in enumerate(item.Attributes))-->
+            [@!attribute.Name!@]<!--(if len(item.Attributes)>(i+1))-->,<!--(end)-->
+    <!--(end)-->
+       FROM [@!item.Name!@] AS [T]
+    <!--(if len(item.PKattributes) > 0)-->
+       WHERE 
+        <!--(for p, pk in enumerate(item.PKattributes))-->
+        [T].[@!pk.Name!@] = @@!pk.Name!@<!--(if len(item.PKattributes)>(i+1))--> AND <!--(end)-->
+        <!--(end)-->
+    <!--(end)-->
+    END --Procedure
+GO
+
+IF EXISTS (SELECT *
+           FROM [dbo].[sysobjects]
+           WHERE [id] = OBJECT_ID(N'@!item.Name!@_Insert')
+           AND OBJECTPROPERTY([id],N'IsProcedure') = 1)
+   DROP PROCEDURE [@!item.Name!@_Insert];
+   GO
+/*  -- ====================================================================================
+    -- @!item.DisplayName!@ CRUD Stored Procedures ([@!item.Name!@_Insert])
+    -- Generated on: @!date!@
+    -- Oscar Version: @!oscar_version!@
+    -- Application Version: @!Version!@
+    --
+    -- Template Version:  1.0
+    -- Version 1.0  Initial version of the template for CRUD Stored Procedures
+    -- ========================================================================================*/
+
+   CREATE PROCEDURE [@!item.Name!@_Insert] (
+    <!--(for i, attribute in enumerate(item.Attributes))-->
+       <!--(if attribute.GetProperty("auto")!="true")-->
+   @@!attribute.Name!@ <!--(if attribute.Datatype.lower()=="string")-->varchar(@!attribute.GetProperty("Length")!@)<!--(elif attribute.Datatype.lower()=="float")-->@!attribute.Datatype.lower()!@(@!attribute.GetProperty("Length")!@, @!attribute.GetProperty("Scale")!@)<!--(elif attribute.Datatype.lower()=="integer")-->int<!--(elif attribute.Datatype.lower()=="timestamp")-->datetime2(7)<!--(else)-->@!attribute.Datatype.lower()!@<!--(end)--><!--(if len(item.Attributes)>(i+1))-->,<!--(end)-->
+       <!--(end)-->
+    <!--(end)-->
+   )
+   AS
+   BEGIN --Procedure
+       INSERT [@!item.Name!@]
+       (
+    <!--(for i, attribute in enumerate(item.Attributes))-->
+        <!--(if attribute.GetProperty("auto")!="true")-->
+            [@!attribute.Name!@]<!--(if len(item.Attributes)>(i+1))-->,<!--(end)-->
+        <!--(end)-->
+    <!--(end)-->
+        )
+        SELECT 
+    <!--(for i, attribute in enumerate(item.Attributes))-->
+        <!--(if attribute.GetProperty("auto")!="true")-->
+            @@!attribute.Name!@<!--(if len(item.Attributes)>(i+1))-->,<!--(end)-->
+        <!--(end)-->
+    <!--(end)-->
+    END --Procedure
+GO
+
+IF EXISTS (SELECT *
+           FROM [dbo].[sysobjects]
+           WHERE [id] = OBJECT_ID(N'@!item.Name!@_Delete')
+           AND OBJECTPROPERTY([id],N'IsProcedure') = 1)
+   DROP PROCEDURE [@!item.Name!@_Delete];
+   GO
+/*  -- ====================================================================================
+    -- @!item.DisplayName!@ CRUD Stored Procedures ([@!item.Name!@_Delete])
+    -- Generated on: @!date!@
+    -- Oscar Version: @!oscar_version!@
+    -- Application Version: @!Version!@
+    --
+    -- Template Version:  1.0
+    -- Version 1.0  Initial version of the template for CRUD Stored Procedures
+    -- ========================================================================================*/
+
+   CREATE PROCEDURE [@!item.Name!@_Delete] 
+    <!--(if len(item.PKattributes) > 0)-->
+    (
+        <!--(for p, pk in enumerate(item.PKattributes))-->
+        @@!pk.Name!@ INT = NULL<!--(if len(item.PKattributes)>(i+1))-->,<!--(end)-->
+        <!--(end)-->
+    )
+    <!--(end)-->
+AS
+   BEGIN --Procedure @!len(item.PKattributes)!@
+       DELETE [@!item.Name!@]
+    <!--(if len(item.PKattributes) > 0)-->
+       WHERE 
+        <!--(for p, pk in enumerate(item.PKattributes))-->
+        [T].[@!pk.Name!@] = @@!pk.Name!@<!--(if len(item.PKattributes)>(i+1))--> AND <!--(end)-->
+        <!--(end)-->
+    <!--(end)-->
+    END --Procedure
+GO
+<!--(end)-->
+

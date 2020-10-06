@@ -1,0 +1,1551 @@
+{
+  "InternalType": "dvo:File",
+  "Token": "Legacy.dvo",
+  "Roles": [
+    "FILE"
+  ],
+  "Children": [
+    {
+      "InternalType": "dvo:BEGIN",
+      "Token": "BEGIN",
+      "Roles": [
+        "PRIMITIVE",
+        "BLOCK"
+      ],
+      "Children": [
+        {
+          "InternalType": "dvo:Datastore",
+          "Token": "Legacy",
+          "Properties": [
+            {
+              "Version": "260"
+            }
+          ],
+          "Roles": [
+            "DATASOURCE",
+            "IDENTIFIER"
+          ],
+          "Children": [
+            {
+              "InternalType": "dvo:Item",
+              "Token": "M204_ASH",
+              "Properties": [
+                {
+                  "Schema": "Legacy"
+                },
+                {
+                  "File": "ASH"
+                }
+              ],
+              "Roles": [
+                "ENTITY",
+                "IDENTIFIER"
+              ],
+              "Children": [
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "RECORD_KEY",
+                  "Properties": [
+                    {
+                      "Scale": "0"
+                    },
+                    {
+                      "Datatype": "NUMERIC"
+                    },
+                    {
+                      "Precision": "30"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "DTS_DTTMSP",
+                  "Properties": [
+                    {
+                      "Datatype": "INTEGER"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "RECTYPE",
+                  "Properties": [
+                    {
+                      "Length": "255"
+                    },
+                    {
+                      "Datatype": "STRING"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "ASH_EQP_ACTL_CPCTY",
+                  "Properties": [
+                    {
+                      "Length": "255"
+                    },
+                    {
+                      "Datatype": "STRING"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "ASH_EQP_CLOSED_DT",
+                  "Properties": [
+                    {
+                      "Length": "255"
+                    },
+                    {
+                      "Datatype": "STRING"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "ASH_EQP_CLOSED_TIME",
+                  "Properties": [
+                    {
+                      "Length": "255"
+                    },
+                    {
+                      "Datatype": "STRING"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "ASH_EQP_DEST_ORZ_TAG",
+                  "Properties": [
+                    {
+                      "Length": "255"
+                    },
+                    {
+                      "Datatype": "STRING"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "ASH_EQP_HAZ_MAT_IND",
+                  "Properties": [
+                    {
+                      "Length": "255"
+                    },
+                    {
+                      "Datatype": "STRING"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "ASH_EQP_MVMNT_CNTRL_CD",
+                  "Properties": [
+                    {
+                      "Length": "255"
+                    },
+                    {
+                      "Datatype": "STRING"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "ASH_EQP_OBSRVD_SHPMNTS",
+                  "Properties": [
+                    {
+                      "Length": "255"
+                    },
+                    {
+                      "Datatype": "STRING"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "ASH_EQP_OBSRVD_WGT",
+                  "Properties": [
+                    {
+                      "Length": "255"
+                    },
+                    {
+                      "Datatype": "STRING"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "ASH_EQP_ORIG_ORZ_TAG",
+                  "Properties": [
+                    {
+                      "Length": "255"
+                    },
+                    {
+                      "Datatype": "STRING"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "ASH_EQP_RSPNSBL_BUS_SCAC",
+                  "Properties": [
+                    {
+                      "Length": "255"
+                    },
+                    {
+                      "Datatype": "STRING"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "ASH_EQP_SEAL_NBR",
+                  "Properties": [
+                    {
+                      "Length": "255"
+                    },
+                    {
+                      "Datatype": "STRING"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "ASH_EQP_TAG",
+                  "Properties": [
+                    {
+                      "Length": "255"
+                    },
+                    {
+                      "Datatype": "STRING"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "ASH_EQP_UNIT_NBR",
+                  "Properties": [
+                    {
+                      "Length": "255"
+                    },
+                    {
+                      "Datatype": "STRING"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "ASH_PCM_ENDT",
+                  "Properties": [
+                    {
+                      "Length": "255"
+                    },
+                    {
+                      "Datatype": "STRING"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "ASH_PCM_END_TIME",
+                  "Properties": [
+                    {
+                      "Length": "255"
+                    },
+                    {
+                      "Datatype": "STRING"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "ASH_PCM_START_TIME",
+                  "Properties": [
+                    {
+                      "Length": "255"
+                    },
+                    {
+                      "Datatype": "STRING"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "ASH_PCM_STDT",
+                  "Properties": [
+                    {
+                      "Length": "255"
+                    },
+                    {
+                      "Datatype": "STRING"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "ASH_PCM_TAG",
+                  "Properties": [
+                    {
+                      "Length": "255"
+                    },
+                    {
+                      "Datatype": "STRING"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "ASH_PRP_EXT_LNGTH",
+                  "Properties": [
+                    {
+                      "Length": "255"
+                    },
+                    {
+                      "Datatype": "STRING"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "ASH_TRVL_MODE",
+                  "Properties": [
+                    {
+                      "Length": "255"
+                    },
+                    {
+                      "Datatype": "STRING"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "CREATE_DATE",
+                  "Properties": [
+                    {
+                      "Length": "255"
+                    },
+                    {
+                      "Datatype": "STRING"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "CREATE_TIME",
+                  "Properties": [
+                    {
+                      "Length": "255"
+                    },
+                    {
+                      "Datatype": "STRING"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "PCM_DEST_ORZ_RFRNC_CD",
+                  "Properties": [
+                    {
+                      "Length": "255"
+                    },
+                    {
+                      "Datatype": "STRING"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "PCM_ORIG_ORZ_RFRNC_CD",
+                  "Properties": [
+                    {
+                      "Length": "255"
+                    },
+                    {
+                      "Datatype": "STRING"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "SOURCEDELETED",
+                  "Properties": [
+                    {
+                      "Datatype": "BOOLEAN"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "Create_TS",
+                  "Properties": [
+                    {
+                      "Length": "7"
+                    },
+                    {
+                      "Datatype": "DATETIME"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "Modify_TS",
+                  "Properties": [
+                    {
+                      "Length": "7"
+                    },
+                    {
+                      "Datatype": "DATETIME"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "Mofidy_ID",
+                  "Properties": [
+                    {
+                      "Length": "20"
+                    },
+                    {
+                      "Datatype": "STRING"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Item",
+                  "Token": "M204_ASH_REOCCUR",
+                  "Properties": [
+                    {
+                      "Schema": "Legacy"
+                    },
+                    {
+                      "File": "ASH"
+                    }
+                  ],
+                  "Roles": [
+                    "ENTITY",
+                    "IDENTIFIER"
+                  ],
+                  "Children": [
+                    {
+                      "InternalType": "dvo:Attribute",
+                      "Token": "ASH_RECORD_KEY",
+                      "Properties": [
+                        {
+                          "Scale": "0"
+                        },
+                        {
+                          "Datatype": "NUMERIC"
+                        },
+                        {
+                          "Precision": "30"
+                        }
+                      ],
+                      "Roles": [
+                        "IDENTIFIER"
+                      ]
+                    },
+                    {
+                      "InternalType": "dvo:Attribute",
+                      "Token": "DTS_DTTMSP",
+                      "Properties": [
+                        {
+                          "Datatype": "INTEGER"
+                        }
+                      ],
+                      "Roles": [
+                        "IDENTIFIER"
+                      ]
+                    },
+                    {
+                      "InternalType": "dvo:Attribute",
+                      "Token": "RECTYPE",
+                      "Properties": [
+                        {
+                          "Length": "255"
+                        },
+                        {
+                          "Datatype": "STRING"
+                        }
+                      ],
+                      "Roles": [
+                        "IDENTIFIER"
+                      ]
+                    },
+                    {
+                      "InternalType": "dvo:Attribute",
+                      "Token": "ASH_EQP_HEADLOAD_CPCTY",
+                      "Properties": [
+                        {
+                          "Length": "255"
+                        },
+                        {
+                          "Datatype": "STRING"
+                        }
+                      ],
+                      "Roles": [
+                        "IDENTIFIER"
+                      ]
+                    },
+                    {
+                      "InternalType": "dvo:Attribute",
+                      "Token": "ASH_EQP_HEADLOD_DEST_ORZ_TAG",
+                      "Properties": [
+                        {
+                          "Length": "255"
+                        },
+                        {
+                          "Datatype": "STRING"
+                        }
+                      ],
+                      "Roles": [
+                        "IDENTIFIER"
+                      ]
+                    },
+                    {
+                      "InternalType": "dvo:Attribute",
+                      "Token": "ASH_EQP_PLCRDS_IMAGE",
+                      "Properties": [
+                        {
+                          "Length": "255"
+                        },
+                        {
+                          "Datatype": "STRING"
+                        }
+                      ],
+                      "Roles": [
+                        "IDENTIFIER"
+                      ]
+                    },
+                    {
+                      "InternalType": "dvo:Attribute",
+                      "Token": "ASH_WGP_ID_NBR",
+                      "Properties": [
+                        {
+                          "Length": "255"
+                        },
+                        {
+                          "Datatype": "STRING"
+                        }
+                      ],
+                      "Roles": [
+                        "IDENTIFIER"
+                      ]
+                    },
+                    {
+                      "InternalType": "dvo:Attribute",
+                      "Token": "ASH_WGP_TAG",
+                      "Properties": [
+                        {
+                          "Length": "255"
+                        },
+                        {
+                          "Datatype": "STRING"
+                        }
+                      ],
+                      "Roles": [
+                        "IDENTIFIER"
+                      ]
+                    },
+                    {
+                      "InternalType": "dvo:Attribute",
+                      "Token": "DUMMY",
+                      "Properties": [
+                        {
+                          "Length": "255"
+                        },
+                        {
+                          "Datatype": "STRING"
+                        }
+                      ],
+                      "Roles": [
+                        "IDENTIFIER"
+                      ]
+                    },
+                    {
+                      "InternalType": "dvo:Attribute",
+                      "Token": "SOURCEDELETED",
+                      "Properties": [
+                        {
+                          "Datatype": "BOOLEAN"
+                        }
+                      ],
+                      "Roles": [
+                        "IDENTIFIER"
+                      ]
+                    },
+                    {
+                      "InternalType": "dvo:Attribute",
+                      "Token": "Create_TS",
+                      "Properties": [
+                        {
+                          "Length": "7"
+                        },
+                        {
+                          "Datatype": "DATETIME"
+                        }
+                      ],
+                      "Roles": [
+                        "IDENTIFIER"
+                      ]
+                    },
+                    {
+                      "InternalType": "dvo:Attribute",
+                      "Token": "Modify_TS",
+                      "Properties": [
+                        {
+                          "Length": "7"
+                        },
+                        {
+                          "Datatype": "DATETIME"
+                        }
+                      ],
+                      "Roles": [
+                        "IDENTIFIER"
+                      ]
+                    },
+                    {
+                      "InternalType": "dvo:Attribute",
+                      "Token": "Mofidy_ID",
+                      "Properties": [
+                        {
+                          "Length": "20"
+                        },
+                        {
+                          "Datatype": "STRING"
+                        }
+                      ],
+                      "Roles": [
+                        "IDENTIFIER"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "InternalType": "dvo:Item",
+              "Token": "M204_BAC",
+              "Properties": [
+                {
+                  "Schema": "Legacy"
+                },
+                {
+                  "File": "BAC"
+                }
+              ],
+              "Roles": [
+                "ENTITY",
+                "IDENTIFIER"
+              ],
+              "Children": [
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "RECORD_KEY",
+                  "Properties": [
+                    {
+                      "Scale": "0"
+                    },
+                    {
+                      "Datatype": "NUMERIC"
+                    },
+                    {
+                      "Precision": "30"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "DTS_DTTMSP",
+                  "Properties": [
+                    {
+                      "Datatype": "INTEGER"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "RECTYPE",
+                  "Properties": [
+                    {
+                      "Length": "255"
+                    },
+                    {
+                      "Datatype": "STRING"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "BAC_ACCT_CODE",
+                  "Properties": [
+                    {
+                      "Length": "255"
+                    },
+                    {
+                      "Datatype": "STRING"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "BAC_BANK_CODE",
+                  "Properties": [
+                    {
+                      "Length": "255"
+                    },
+                    {
+                      "Datatype": "STRING"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "BAC_DESCRIPTION",
+                  "Properties": [
+                    {
+                      "Length": "255"
+                    },
+                    {
+                      "Datatype": "STRING"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "BAC_DISPLAY",
+                  "Properties": [
+                    {
+                      "Length": "255"
+                    },
+                    {
+                      "Datatype": "STRING"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "BAC_EFF_DATE",
+                  "Properties": [
+                    {
+                      "Length": "255"
+                    },
+                    {
+                      "Datatype": "STRING"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "BAC_END_DATE",
+                  "Properties": [
+                    {
+                      "Length": "255"
+                    },
+                    {
+                      "Datatype": "STRING"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "CREATE_DATE",
+                  "Properties": [
+                    {
+                      "Length": "255"
+                    },
+                    {
+                      "Datatype": "STRING"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "CREATE_TIME",
+                  "Properties": [
+                    {
+                      "Length": "255"
+                    },
+                    {
+                      "Datatype": "STRING"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "USER",
+                  "Properties": [
+                    {
+                      "Length": "255"
+                    },
+                    {
+                      "Datatype": "STRING"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "SOURCEDELETED",
+                  "Properties": [
+                    {
+                      "Datatype": "BOOLEAN"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "Create_TS",
+                  "Properties": [
+                    {
+                      "Length": "7"
+                    },
+                    {
+                      "Datatype": "DATETIME"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "Modify_TS",
+                  "Properties": [
+                    {
+                      "Length": "7"
+                    },
+                    {
+                      "Datatype": "DATETIME"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "Mofidy_ID",
+                  "Properties": [
+                    {
+                      "Length": "20"
+                    },
+                    {
+                      "Datatype": "STRING"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Item",
+                  "Token": "M204_BAC_REOCCUR",
+                  "Properties": [
+                    {
+                      "Schema": "Legacy"
+                    },
+                    {
+                      "File": "BAC"
+                    }
+                  ],
+                  "Roles": [
+                    "ENTITY",
+                    "IDENTIFIER"
+                  ],
+                  "Children": [
+                    {
+                      "InternalType": "dvo:Attribute",
+                      "Token": "BAC_RECORD_KEY",
+                      "Properties": [
+                        {
+                          "Scale": "0"
+                        },
+                        {
+                          "Datatype": "NUMERIC"
+                        },
+                        {
+                          "Precision": "30"
+                        }
+                      ],
+                      "Roles": [
+                        "IDENTIFIER"
+                      ]
+                    },
+                    {
+                      "InternalType": "dvo:Attribute",
+                      "Token": "DTS_DTTMSP",
+                      "Properties": [
+                        {
+                          "Datatype": "INTEGER"
+                        }
+                      ],
+                      "Roles": [
+                        "IDENTIFIER"
+                      ]
+                    },
+                    {
+                      "InternalType": "dvo:Attribute",
+                      "Token": "RECTYPE",
+                      "Properties": [
+                        {
+                          "Length": "255"
+                        },
+                        {
+                          "Datatype": "STRING"
+                        }
+                      ],
+                      "Roles": [
+                        "IDENTIFIER"
+                      ]
+                    },
+                    {
+                      "InternalType": "dvo:Attribute",
+                      "Token": "BAC_AUDIT_IMAGE",
+                      "Properties": [
+                        {
+                          "Length": "255"
+                        },
+                        {
+                          "Datatype": "STRING"
+                        }
+                      ],
+                      "Roles": [
+                        "IDENTIFIER"
+                      ]
+                    },
+                    {
+                      "InternalType": "dvo:Attribute",
+                      "Token": "DUMMY",
+                      "Properties": [
+                        {
+                          "Length": "255"
+                        },
+                        {
+                          "Datatype": "STRING"
+                        }
+                      ],
+                      "Roles": [
+                        "IDENTIFIER"
+                      ]
+                    },
+                    {
+                      "InternalType": "dvo:Attribute",
+                      "Token": "SOURCEDELETED",
+                      "Properties": [
+                        {
+                          "Datatype": "BOOLEAN"
+                        }
+                      ],
+                      "Roles": [
+                        "IDENTIFIER"
+                      ]
+                    },
+                    {
+                      "InternalType": "dvo:Attribute",
+                      "Token": "Create_TS",
+                      "Properties": [
+                        {
+                          "Length": "7"
+                        },
+                        {
+                          "Datatype": "DATETIME"
+                        }
+                      ],
+                      "Roles": [
+                        "IDENTIFIER"
+                      ]
+                    },
+                    {
+                      "InternalType": "dvo:Attribute",
+                      "Token": "Modify_TS",
+                      "Properties": [
+                        {
+                          "Length": "7"
+                        },
+                        {
+                          "Datatype": "DATETIME"
+                        }
+                      ],
+                      "Roles": [
+                        "IDENTIFIER"
+                      ]
+                    },
+                    {
+                      "InternalType": "dvo:Attribute",
+                      "Token": "Mofidy_ID",
+                      "Properties": [
+                        {
+                          "Length": "20"
+                        },
+                        {
+                          "Datatype": "STRING"
+                        }
+                      ],
+                      "Roles": [
+                        "IDENTIFIER"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "InternalType": "dvo:Item",
+              "Token": "M204_CMT",
+              "Properties": [
+                {
+                  "Schema": "Legacy"
+                },
+                {
+                  "File": "CMT"
+                }
+              ],
+              "Roles": [
+                "ENTITY",
+                "IDENTIFIER"
+              ],
+              "Children": [
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "RECORD_KEY",
+                  "Properties": [
+                    {
+                      "Scale": "0"
+                    },
+                    {
+                      "Datatype": "NUMERIC"
+                    },
+                    {
+                      "Precision": "30"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "DTS_DTTMSP",
+                  "Properties": [
+                    {
+                      "Datatype": "INTEGER"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "RECTYPE",
+                  "Properties": [
+                    {
+                      "Length": "255"
+                    },
+                    {
+                      "Datatype": "STRING"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "CMT_BUS_TAG",
+                  "Properties": [
+                    {
+                      "Length": "255"
+                    },
+                    {
+                      "Datatype": "STRING"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "CREATE_DATE",
+                  "Properties": [
+                    {
+                      "Length": "255"
+                    },
+                    {
+                      "Datatype": "STRING"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "DATE_R",
+                  "Properties": [
+                    {
+                      "Length": "255"
+                    },
+                    {
+                      "Datatype": "STRING"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "FUNCTION",
+                  "Properties": [
+                    {
+                      "Length": "255"
+                    },
+                    {
+                      "Datatype": "STRING"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "PROCEDURE",
+                  "Properties": [
+                    {
+                      "Length": "255"
+                    },
+                    {
+                      "Datatype": "STRING"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "TIME_R",
+                  "Properties": [
+                    {
+                      "Length": "255"
+                    },
+                    {
+                      "Datatype": "STRING"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "USER",
+                  "Properties": [
+                    {
+                      "Length": "255"
+                    },
+                    {
+                      "Datatype": "STRING"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "SOURCEDELETED",
+                  "Properties": [
+                    {
+                      "Datatype": "BOOLEAN"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "Create_TS",
+                  "Properties": [
+                    {
+                      "Length": "7"
+                    },
+                    {
+                      "Datatype": "DATETIME"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "Modify_TS",
+                  "Properties": [
+                    {
+                      "Length": "7"
+                    },
+                    {
+                      "Datatype": "DATETIME"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "Mofidy_ID",
+                  "Properties": [
+                    {
+                      "Length": "20"
+                    },
+                    {
+                      "Datatype": "STRING"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Item",
+                  "Token": "M204_CMT_REOCCUR",
+                  "Properties": [
+                    {
+                      "Schema": "Legacy"
+                    },
+                    {
+                      "File": "CMT"
+                    }
+                  ],
+                  "Roles": [
+                    "ENTITY",
+                    "IDENTIFIER"
+                  ],
+                  "Children": [
+                    {
+                      "InternalType": "dvo:Attribute",
+                      "Token": "CMT_RECORD_KEY",
+                      "Properties": [
+                        {
+                          "Scale": "0"
+                        },
+                        {
+                          "Datatype": "NUMERIC"
+                        },
+                        {
+                          "Precision": "30"
+                        }
+                      ],
+                      "Roles": [
+                        "IDENTIFIER"
+                      ]
+                    },
+                    {
+                      "InternalType": "dvo:Attribute",
+                      "Token": "DTS_DTTMSP",
+                      "Properties": [
+                        {
+                          "Datatype": "INTEGER"
+                        }
+                      ],
+                      "Roles": [
+                        "IDENTIFIER"
+                      ]
+                    },
+                    {
+                      "InternalType": "dvo:Attribute",
+                      "Token": "RECTYPE",
+                      "Properties": [
+                        {
+                          "Length": "255"
+                        },
+                        {
+                          "Datatype": "STRING"
+                        }
+                      ],
+                      "Roles": [
+                        "IDENTIFIER"
+                      ]
+                    },
+                    {
+                      "InternalType": "dvo:Attribute",
+                      "Token": "CMT_PROFILE_INTL_TEXT",
+                      "Properties": [
+                        {
+                          "isBase64": "1"
+                        },
+                        {
+                          "Length": "255"
+                        },
+                        {
+                          "Datatype": "STRING"
+                        }
+                      ],
+                      "Roles": [
+                        "IDENTIFIER"
+                      ]
+                    },
+                    {
+                      "InternalType": "dvo:Attribute",
+                      "Token": "CMT_PROFILE_MISC_TEXT",
+                      "Properties": [
+                        {
+                          "isBase64": "1"
+                        },
+                        {
+                          "Length": "-1"
+                        },
+                        {
+                          "Datatype": "STRING"
+                        }
+                      ],
+                      "Roles": [
+                        "IDENTIFIER"
+                      ]
+                    },
+                    {
+                      "InternalType": "dvo:Attribute",
+                      "Token": "CMT_PROFILE_RAF_TEXT",
+                      "Properties": [
+                        {
+                          "isBase64": "1"
+                        },
+                        {
+                          "Length": "-1"
+                        },
+                        {
+                          "Datatype": "STRING"
+                        }
+                      ],
+                      "Roles": [
+                        "IDENTIFIER"
+                      ]
+                    },
+                    {
+                      "InternalType": "dvo:Attribute",
+                      "Token": "DUMMY",
+                      "Properties": [
+                        {
+                          "Length": "255"
+                        },
+                        {
+                          "Datatype": "STRING"
+                        }
+                      ],
+                      "Roles": [
+                        "IDENTIFIER"
+                      ]
+                    },
+                    {
+                      "InternalType": "dvo:Attribute",
+                      "Token": "SOURCEDELETED",
+                      "Properties": [
+                        {
+                          "Datatype": "BOOLEAN"
+                        }
+                      ],
+                      "Roles": [
+                        "IDENTIFIER"
+                      ]
+                    },
+                    {
+                      "InternalType": "dvo:Attribute",
+                      "Token": "Create_TS",
+                      "Properties": [
+                        {
+                          "Length": "7"
+                        },
+                        {
+                          "Datatype": "DATETIME"
+                        }
+                      ],
+                      "Roles": [
+                        "IDENTIFIER"
+                      ]
+                    },
+                    {
+                      "InternalType": "dvo:Attribute",
+                      "Token": "Modify_TS",
+                      "Properties": [
+                        {
+                          "Length": "7"
+                        },
+                        {
+                          "Datatype": "DATETIME"
+                        }
+                      ],
+                      "Roles": [
+                        "IDENTIFIER"
+                      ]
+                    },
+                    {
+                      "InternalType": "dvo:Attribute",
+                      "Token": "Mofidy_ID",
+                      "Properties": [
+                        {
+                          "Length": "20"
+                        },
+                        {
+                          "Datatype": "STRING"
+                        }
+                      ],
+                      "Roles": [
+                        "IDENTIFIER"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "InternalType": "dvo:END",
+      "Token": "END",
+      "Roles": [
+        "PRIMITIVE",
+        "END_BLOCK"
+      ]
+    }
+  ]
+}

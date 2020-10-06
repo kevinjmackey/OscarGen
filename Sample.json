@@ -1,0 +1,374 @@
+{
+  "InternalType": "dvo:File",
+  "Token": "Sample.dvo",
+  "Roles": [
+    "FILE"
+  ],
+  "Children": [
+    {
+      "InternalType": "dvo:BEGIN",
+      "Token": "BEGIN",
+      "Roles": [
+        "PRIMITIVE",
+        "BLOCK"
+      ],
+      "Children": [
+        {
+          "InternalType": "dvo:Datastore",
+          "Token": "myStore",
+          "Properties": [
+            {
+              "Display Name": "My Database"
+            }
+          ],
+          "Roles": [
+            "DATASOURCE",
+            "IDENTIFIER"
+          ],
+          "Children": [
+            {
+              "InternalType": "dvo:Item",
+              "Token": "item1",
+              "Properties": [
+                {
+                  "Display Name": "Customer Record"
+                }
+              ],
+              "Roles": [
+                "ENTITY",
+                "IDENTIFIER"
+              ],
+              "Children": [
+                {
+                  "InternalType": "dvo:Association",
+                  "Token": "modified_by",
+                  "Properties": [
+                    {
+                      "Item": "item3"
+                    },
+                    {
+                      "ToKey": "someID"
+                    },
+                    {
+                      "FromKey": "item3ID"
+                    },
+                    {
+                      "Cardinality": "1-2-1"
+                    }
+                  ],
+                  "Roles": [
+                    "RELATIONSHIP",
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Association",
+                  "Token": "has_address",
+                  "Properties": [
+                    {
+                      "Item": "item4"
+                    },
+                    {
+                      "ToKey": "i4ID"
+                    },
+                    {
+                      "FromKey": "ID"
+                    },
+                    {
+                      "Cardinality": "M-2-M"
+                    }
+                  ],
+                  "Roles": [
+                    "RELATIONSHIP",
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "someId",
+                  "Properties": [
+                    {
+                      "required": "true"
+                    },
+                    {
+                      "increment": [
+                        1,
+                        1
+                      ]
+                    },
+                    {
+                      "Datatype": "INTEGER"
+                    },
+                    {
+                      "auto": "true"
+                    },
+                    {
+                      "PK": "true"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "Name",
+                  "Properties": [
+                    {
+                      "Length": "7"
+                    },
+                    {
+                      "Default": "Kevin"
+                    },
+                    {
+                      "Datatype": "CHARACTER"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "Age",
+                  "Properties": [
+                    {
+                      "Datatype": "INTEGER"
+                    },
+                    {
+                      "Default": "+28"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "item3ID",
+                  "Properties": [
+                    {
+                      "Datatype": "INTEGER"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                }
+              ]
+            },
+            {
+              "InternalType": "dvo:Item",
+              "Token": "item2",
+              "Properties": [
+                {
+                  "Plural": "itemtwos"
+                }
+              ],
+              "Roles": [
+                "ENTITY",
+                "IDENTIFIER"
+              ],
+              "Children": [
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "ID",
+                  "Properties": [
+                    {
+                      "Datatype": "INTEGER"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "Home",
+                  "Properties": [
+                    {
+                      "Datatype": "STRING"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "Value",
+                  "Properties": [
+                    {
+                      "Length": "7"
+                    },
+                    {
+                      "Default": "12345.0"
+                    },
+                    {
+                      "Datatype": "FLOAT"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "Now",
+                  "Properties": [
+                    {
+                      "Datatype": "DATETIME"
+                    },
+                    {
+                      "Default": "LEFT(GETDATE(),10)"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Item",
+                  "Token": "item3",
+                  "Properties": [
+                    {
+                      "Display Name": "Child of item2"
+                    }
+                  ],
+                  "Roles": [
+                    "ENTITY",
+                    "IDENTIFIER"
+                  ],
+                  "Children": [
+                    {
+                      "InternalType": "dvo:Attribute",
+                      "Token": "someID",
+                      "Properties": [
+                        {
+                          "Datatype": "INTEGER"
+                        },
+                        {
+                          "PK": "true"
+                        }
+                      ],
+                      "Roles": [
+                        "IDENTIFIER"
+                      ]
+                    },
+                    {
+                      "InternalType": "dvo:Attribute",
+                      "Token": "someName",
+                      "Properties": [
+                        {
+                          "Datatype": "STRING"
+                        },
+                        {
+                          "Length": "255"
+                        }
+                      ],
+                      "Roles": [
+                        "IDENTIFIER"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Item",
+                  "Token": "item4",
+                  "Properties": [
+                    {
+                      "Display Name": "Also Child of item2"
+                    }
+                  ],
+                  "Roles": [
+                    "ENTITY",
+                    "IDENTIFIER"
+                  ],
+                  "Children": [
+                    {
+                      "InternalType": "dvo:Attribute",
+                      "Token": "someID",
+                      "Properties": [
+                        {
+                          "Datatype": "STRING"
+                        },
+                        {
+                          "PK": "true"
+                        }
+                      ],
+                      "Roles": [
+                        "IDENTIFIER"
+                      ]
+                    },
+                    {
+                      "InternalType": "dvo:Attribute",
+                      "Token": "someName",
+                      "Properties": [
+                        {
+                          "Datatype": "STRING"
+                        },
+                        {
+                          "Length": "255"
+                        }
+                      ],
+                      "Roles": [
+                        "IDENTIFIER"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "InternalType": "dvo:Item",
+              "Token": "item4",
+              "Properties": [
+                {
+                  "Plural": "itemfours"
+                }
+              ],
+              "Roles": [
+                "ENTITY",
+                "IDENTIFIER"
+              ],
+              "Children": [
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "i4ID",
+                  "Properties": [
+                    {
+                      "Datatype": "INTEGER"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                },
+                {
+                  "InternalType": "dvo:Attribute",
+                  "Token": "some_text_field",
+                  "Properties": [
+                    {
+                      "Datatype": "STRING"
+                    }
+                  ],
+                  "Roles": [
+                    "IDENTIFIER"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "InternalType": "dvo:END",
+      "Token": "END",
+      "Roles": [
+        "PRIMITIVE",
+        "END_BLOCK"
+      ]
+    }
+  ]
+}

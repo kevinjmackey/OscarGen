@@ -1,0 +1,19 @@
+/*  -- ====================================================================================
+    -- @!item.DisplayName!@ Create Table ([@!item.Name!@])
+    -- Generated on: @!date!@
+    -- Oscar Version: @!oscar_version!@
+    -- Application Version: @!Version!@
+    --
+    -- Template Version:  1.0
+    -- Version 1.0  Initial version of the template for Table definitions
+    --Datastore: @!item.Datastore.Name!@
+    -- ========================================================================================*/
+DROP TABLE IF EXISTS [@!item.CapName!@];
+
+CREATE TABLE [@!item.CapName!@]
+(
+    <!--(for i, attribute in enumerate(item.Attributes))-->
+   [@!attribute.Name!@] <!--(if attribute.Datatype.lower()=="string")-->varchar(@!attribute.GetProperty("Length")!@)<!--(elif attribute.Datatype.lower()=="character")-->char(@!attribute.GetProperty("Length")!@)<!--(elif attribute.Datatype.lower()=="float")-->@!attribute.Datatype.lower()!@(@!attribute.GetProperty("Length")!@, @!attribute.GetProperty("Scale")!@)<!--(elif attribute.Datatype.lower()=="integer")-->int<!--(elif attribute.Datatype.lower()=="datetime")-->datetime2(7)<!--(else)-->@!attribute.Datatype.lower()!@<!--(end)--><!--(if attribute.GetProperty("auto")=="true")--> IDENTITY (@!attribute.GetProperty("increment")!@)<!--(end)--><!--(if len(item.Attributes)>(i+1))-->,<!--(end)-->
+    <!--(end)-->
+)
+;

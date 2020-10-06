@@ -1,0 +1,36 @@
+{
+    "Application" : 
+    {
+        "Name" : "Test Application",
+        "Prefix" : "DV",
+        "Namespace" : "TestApplication",
+        "RootFolder" : "D:\\projects\\TestApplication",
+        "AppURI" : "",
+        "Version" : "1.1.0"
+    },
+    "Files" : [
+        {
+            "Label" : "Table Defs",
+            "OutputFile" : "@!item.Name!@.sql",
+            "OutputFolder" : "@!RootFolder!@\\src\\tabledefs\\",
+            "FileName" : ".\\templates\\tabledef.tmpl",
+            "Action" : "each",
+            "SkipChildItems": "True"
+        },
+        {
+            "Label" : "CRUD SPs",
+            "OutputFile" : "@!Namespace!@.sql",
+            "OutputFolder" : "@!RootFolder!@\\src\\crudsps\\",
+            "FileName" : ".\\templates\\crudsps.tmpl",
+            "Exclude": ["item4"],
+            "Action" : "once"
+        },
+        {
+            "Label" : "Data View Image",
+            "OutputFile" : "data view.png",
+            "OutputFolder" : "@!RootFolder!@\\src\\resources\\",
+            "FileName" : ".\\resources\\data view.png",
+            "Action" : "copy"
+        }
+    ]
+}
