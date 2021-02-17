@@ -349,10 +349,10 @@ class Attribute:
     def GetProperty(self, key):
         return self._properties[key] if key in self._properties else ""
 
-datastoreIDs = []
+datastoreID = ""
 parentIDs = []
 itemIDs = []
-datastores = []
+datastore = Datastore("")
 parentItems = []
 items = []
 tree = None
@@ -431,7 +431,10 @@ def MakeADatastore(node):
 
 def WalkTheTree(_node):
     if _node.RawInternalType == "dvo:Datastore":
-        datastoreIDs.append(_node.ID)
+        global datastoreID
+        global datastore
+        datastoreID = _node.ID
+        datastore = MakeADatastore(_node)
     if _node.RawInternalType == "dvo:Item":
         if _node.ID not in itemIDs:
             itemIDs.append(_node.ID)
@@ -446,8 +449,6 @@ def PopulateArrays(astTree):
         itemIDs.append(astTree.ID)
     for child in astTree.Children:
         WalkTheTree(child)
-    for datastoreID in datastoreIDs:
-        datastores.append(MakeADatastore(astTree.GetNodeByID(datastoreID)))
     for parentID in parentIDs:
         parentItems.append(MakeAnItem(astTree.GetNodeByID(parentID)))
     for itemID in itemIDs:
@@ -462,9 +463,6 @@ class AppFile:
     action = ""
     include = []
     exclude = []
-
-datastores = []
-items = []
 
 def ApplyTemplate(_dict, _templateString):
     localDict = _dict
@@ -510,8 +508,7 @@ def ProcessOnceFiles(appConfig, appFile):
     localDict["oscar_version"] = OSCAR_VERSION
     localDict["date"] = str(datetime.now())
     localDict["items"] = itemsToProcess
-    if len(datastores) > 0:
-        localDict["datastores"] = datastores
+    localDict["datastore"] = datastore
     t = pyratemp.Template(filename=appFile.fileName)
     with open(outputFile, "w") as fout:
         fout.write(t(**localDict))
@@ -525,8 +522,7 @@ def ProcessEachFiles(appConfig, appFile):
     for k,v in appConfig.items():
         localDict[k] = v
     localDict["date"] = str(datetime.now())
-    if len(datastores) > 0:
-        localDict["datastores"] = datastores
+    localDict["datastore"] = datastore
     t = pyratemp.Template(filename=appFile.fileName)
     for item in itemsToProcess:
         localDict["item"] = item
