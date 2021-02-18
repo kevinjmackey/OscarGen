@@ -17,6 +17,7 @@
 *.iso
 *.jar
 *.rar
+*.spec
 *.tar
 *.zip
 
@@ -26,6 +27,8 @@ Oscar/obj
 ParseOscarFile/obj
 uast/obj
 Oscar/bin
+dist
+build
 ParseOscarFile/bin
 uast/bin
 .vs
