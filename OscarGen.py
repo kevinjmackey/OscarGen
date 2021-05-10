@@ -199,7 +199,14 @@ class Item:
     def HasProperty(self, key):
         return True if key in self._properties else False
     def GetProperty(self, key):
-        return self._properties[key] if key in self._properties else ""
+        if key in self._properties:
+            if self._properties[key][0] == "[":
+                return self._properties[key].replace("[","").replace("]","").split(",")
+            else:
+                return self._properties[key]
+        else:
+            return ""
+#        return self._properties[key] if key in self._properties else ""
     @property
     def HasParentItem(self):
         return True if self._parent != None and self._parent.InternalType == "dvo:Item" else False
