@@ -318,27 +318,27 @@ class Role(enum.Enum):
     # Join clause for database tables
     JOINCLAUSE = 131
     # Table hintfor database tables
-    TABLEHINT = 132,
+    TABLEHINT = 132
     # Left Parenttethis
-    LPAREN = 133,
+    LPAREN = 133
     # Table hint for database tables
-    RPAREN = 134,
+    RPAREN = 134
     # SELECT keywords such as DISTINCT, ALL, INTO, etc.
-    SELECT_KEYWORD = 135,
+    SELECT_KEYWORD = 135
     # Aggregate keywords such as GROUP BY, HAVING, etc.
-    AGGREGATE_KEYWORD = 136,
+    AGGREGATE_KEYWORD = 136
     # SQL WHERE keyword
-    WHERE_KEYWORD = 137,
+    WHERE_KEYWORD = 137
     # SELECT INTO keyword
-    INTO_KEYWORD = 138,
+    INTO_KEYWORD = 138
     # SQL FROM keyword
-    FROM_KEYWORD = 139,
+    FROM_KEYWORD = 139
     # End of a statement block/Case block
-    END_BLOCK = 140,
+    END_BLOCK = 140
     # Class, Database Entity, Graph Node
-    ENTITY = 141,
+    ENTITY = 141
     # Graph Edge, Relationship
-    EDGE = 142,
+    EDGE = 142
     # Relationship between two entities, an edge between two nodes
     RELATIONSHIP = 143
     # File Field, Database Column, Graph Property, Code Variable
