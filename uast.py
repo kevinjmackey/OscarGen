@@ -339,8 +339,10 @@ class Role(enum.Enum):
     ENTITY = 141,
     # Graph Edge, Relationship
     EDGE = 142,
-    # Relationship between tow entities, an edge between two nodes
+    # Relationship between two entities, an edge between two nodes
     RELATIONSHIP = 143
+    # File Field, Database Column, Graph Property, Code Variable
+    FIELD = 144
 
 class UastNode:
     _ID = ""
