@@ -8,7 +8,7 @@ import shutil
 import sys
 import uast
 
-OSCAR_VERSION = "1.0"
+OSCAR_VERSION = "1.1"
 
 class Datastore:
     _ID = ""
@@ -72,6 +72,7 @@ class Item:
     _internalType = ""
     _properties = {}
     _associations = []
+    _filters = []
     _attributes = []
     _childItems = []
     _token = ""
@@ -84,6 +85,7 @@ class Item:
         self._internalType = "dvo:Item"
         self._properties = {}
         self._associations = []
+        self._filters = []
         self._attributes = []
         self._childItems = []
         self._token = ""
@@ -169,6 +171,14 @@ class Item:
         return self._associations
 
     @property
+    def HasFilters(self):
+        return len(self._filters) > 0
+
+    @property
+    def Filters(self):
+        return self._filters
+
+    @property
     def PKattributes(self):
         pkAttributes = []
         for attrib in self._attributes:
@@ -178,6 +188,9 @@ class Item:
 
     def AddAssociation(self, association):
         self._associations.append(association)
+
+    def AddFilter(self, filter):
+        self._filters.append(filter)
 
     def AddAttribute(self, attribute):
         self._attributes.append(attribute)
@@ -286,6 +299,63 @@ class Association:
         return True if key in self._properties else False
     def GetProperty(self, key):
         return self._properties[key] if key in self._properties else ""
+
+class Filter:
+    _ID = ""
+    _internalType = ""
+    _properties = {}
+    _conditions = []
+
+    def __init__(self, id):
+        self._ID = id
+        self._internalType = "dvo:Filter"
+        self._properties = {}
+        self._conditions = []
+
+    @property
+    def ID(self):
+        return self._ID
+
+    @property
+    def Properties(self):
+        return self._properties
+
+    @property
+    def InternalType(self):
+        return self._internalType
+    @InternalType.setter
+    def InternalType(self, value):
+        self._internalType = value
+
+    def AddProperty(self, name, value):
+        self._properties[name] = str(value).replace("\"","").replace("[","").replace("]","")
+
+    def AddCondition(self, child):
+        for c in c.Children:
+            aCondition = FilterCondition(c.RawToken)
+        for k,v in c._properties.items():
+            aCondition.AddProperty(k,v)
+        self._conditions.append(aCondition)
+
+class FilterCondition:
+    _properties = {}
+
+    def __init__(self, token):
+        self._properties["token"] = token
+
+    def AddProperty(self, name, value):
+        self._properties[name] = str(value).replace("\"","").replace("[","").replace("]","")
+
+    def Name(self):
+        return self._properties["token"]
+        
+    @property
+    def DisplayName(self):
+        return self._properties["Display Name"] 
+
+    @property
+    def Operator(self):
+        return self._properties["Condition"] 
 
 class Attribute:
     _ID = ""
@@ -401,6 +471,14 @@ def MakeAnAssociation(node):
 
     return anAssociation
 
+def MakeAFilter(node):
+    aFilter = Filter(node.ID)
+    if node.HasProperties:
+        for k,v in node._properties.items():
+            aFilter.AddProperty(k,v)
+    for child in node.Children:
+        aFilter.AddCondition(child)
+
 def MakeAnItem(node):
     anItem = Item(node.ID)
     anItem.Token = node.RawToken
@@ -413,6 +491,8 @@ def MakeAnItem(node):
     for child in node.Children:
         if child.RawInternalType == "dvo:Association":
             anItem.AddAssociation(MakeAnAssociation(child))
+        if child.RawInternalType == "dvo:Filter":
+            anItem.AddFilter(MakeAFilter(child))
         if child.RawInternalType == "dvo:Attribute":
             anItem.AddAttribute(MakeAnAttribute(child))
         if child.RawInternalType == "dvo:Item":
