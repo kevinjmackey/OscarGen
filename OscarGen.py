@@ -327,27 +327,32 @@ class Filter:
     def InternalType(self, value):
         self._internalType = value
 
+    @property
+    def Conditions(self):
+        return self._conditions
+    
     def AddProperty(self, name, value):
         self._properties[name] = str(value).replace("\"","").replace("[","").replace("]","")
 
-    def AddCondition(self, child):
-        for c in c.Children:
-            aCondition = FilterCondition(c.RawToken)
-        for k,v in c._properties.items():
-            aCondition.AddProperty(k,v)
+    def AddACondition(self, aCondition):
         self._conditions.append(aCondition)
 
 class FilterCondition:
+    _ID = ""
+    _internalType = ""
     _properties = {}
 
-    def __init__(self, token):
-        self._properties["token"] = token
+    def __init__(self, id):
+        self._ID = id
+        self._internalType = "dvo:Condition"
+        self._properties = {}
 
     def AddProperty(self, name, value):
         self._properties[name] = str(value).replace("\"","").replace("[","").replace("]","")
 
-    def Name(self):
-        return self._properties["token"]
+    @property
+    def Column(self):
+        return self._properties["Column"]
         
     @property
     def DisplayName(self):
@@ -471,13 +476,22 @@ def MakeAnAssociation(node):
 
     return anAssociation
 
+def MakeACondition(node):
+    aCondition = FilterCondition(node.ID)
+    aCondition.AddProperty("Column", node.RawToken)
+    for k,v in node._properties.items():
+        aCondition.AddProperty(k,v)
+
+    return aCondition
+
 def MakeAFilter(node):
     aFilter = Filter(node.ID)
     if node.HasProperties:
         for k,v in node._properties.items():
             aFilter.AddProperty(k,v)
     for child in node.Children:
-        aFilter.AddCondition(child)
+        aFilter.AddACondition(MakeACondition(child))
+    return aFilter
 
 def MakeAnItem(node):
     anItem = Item(node.ID)

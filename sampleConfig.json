@@ -1,0 +1,27 @@
+{
+    "Application" : 
+    {
+        "Name" : "Sample App",
+        "Prefix" : "DV",
+        "Namespace" : "SampleApp",
+        "RootFolder" : "I:\\DVProjects\\IntuitionData\\OscarGen\\SampleApp",
+        "AppURI" : "",
+        "Version" : "1.0.0"
+    },
+    "Files" : [
+        {
+            "Label" : "Sample",
+            "OutputFile" : "SampleContent.txt",
+            "OutputFolder" : "@!RootFolder!@\\Sample\\",
+            "FileName" : ".\\Sample.tmpl",
+            "Action" : "once"
+        },
+        {
+            "Label" : "Sample Template",
+            "OutputFile" : "Sample.tmpl",
+            "OutputFolder" : "@!RootFolder!@\\Sample\\",
+            "FileName" : ".\\Sample.tmpl",
+            "Action" : "copy"
+        }
+    ]
+}

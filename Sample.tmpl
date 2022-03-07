@@ -1,0 +1,35 @@
+namespace @!Namespace!@
+DataStore Name: @!datastore.Name!@
+DataStore Display Name: @!datastore.DisplayName!@
+
+<!--(for i,item in enumerate(items))-->
+Item Name: @!item.CapName!@
+Plural: @!item.CapPlural!@
+    <!--(if item.HasAssociations)-->
+        <!--(for j,association in enumerate(item.Associations))-->
+        Association: @!association.Token!@
+        From Key: @!association.FromKey!@ 
+        To Key: @!association.ToKey!@ 
+        Connected Item; @!association.Item!@ 
+        Cardinality: @!association.Cardinality!@
+
+        <!--(end)-->
+    <!--(end)-->
+    <!--(if item.HasFilters)-->
+        Filters:
+        <!--(for j,filter in enumerate(item.Filters))-->
+            <!--(for k,condition in enumerate(filter.Conditions))-->
+        Condition Column: @!condition.Column!@
+        Display Name: @!condition.DisplayName!@
+        Operator: @!condition.Operator!@
+        
+            <!--(end)-->
+        <!--(end)-->
+    <!--(end)-->
+
+    <!--(for j,attrib in enumerate(item.Attributes))-->
+    Attribute Name: @!attrib.Name!@
+    Datatype: @!attrib.GetProperty("Datatype")!@
+    <!--(end)-->
+    
+<!--(end)-->

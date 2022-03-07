@@ -343,6 +343,8 @@ class Role(enum.Enum):
     RELATIONSHIP = 143
     # File Field, Database Column, Graph Property, Code Variable
     FIELD = 144
+    # A condition, or set of conditions, used to reduce a set of elements to a smaller set
+    FILTER = 145
 
 class UastNode:
     _ID = ""

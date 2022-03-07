@@ -1,0 +1,77 @@
+namespace SampleApp
+DataStore Name: myStore
+DataStore Display Name: My Database
+
+Item Name: Item1
+Plural: Item1s
+        Association: modified_by
+        From Key: modifiedId 
+        To Key: userId 
+        Connected Item; user 
+        Cardinality: 1-2-1
+
+        Association: has_address
+        From Key: CustomerId 
+        To Key: addressId 
+        Connected Item; address 
+        Cardinality: M-2-M
+
+        Filters:
+        Condition Column: id
+        Display Name: Item Two
+        Operator: =
+        
+        Condition Column: someID
+        Display Name: An ID
+        Operator: =
+        
+
+    Attribute Name: CustomerId
+    Datatype: INTEGER
+    Attribute Name: Name
+    Datatype: CHARACTER
+    Attribute Name: Age
+    Datatype: INTEGER
+    Attribute Name: date
+    Datatype: INTEGER
+    
+Item Name: Item2
+Plural: Itemtwos
+
+    Attribute Name: ID
+    Datatype: INTEGER
+    Attribute Name: Home
+    Datatype: STRING
+    Attribute Name: Value
+    Datatype: NUMERIC
+    Attribute Name: Now
+    Datatype: DATETIME
+    
+Item Name: Item3
+Plural: Item3s
+
+    Attribute Name: someID
+    Datatype: INTEGER
+    Attribute Name: someName
+    Datatype: STRING
+    Attribute Name: money
+    Datatype: FLOAT
+    
+Item Name: Item4
+Plural: Item4s
+
+    Attribute Name: someID
+    Datatype: STRING
+    Attribute Name: someName
+    Datatype: STRING
+    
+Item Name: Item5
+Plural: Itemfives
+
+    Attribute Name: i5ID
+    Datatype: INTEGER
+    Attribute Name: some_text_field
+    Datatype: STRING
+    Attribute Name: a_date_field
+    Datatype: DATE
+    
